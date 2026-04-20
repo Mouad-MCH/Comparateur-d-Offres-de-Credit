@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+
+@theme {
+    --color-primary: #546EF7;
+    --color-secondary: #94A3B8;
+    --color-tertialy: #10B981;
+    --color-neutral: #F8FAFC;
+}
+
+
+
+@layer components {
+    .navbar {
+        @apply flex justify-between items-center px-10 bg-secondary;
+    }
+}
+
+@utility flex-center {
+    @apply flex justify-center items-center;
+}
