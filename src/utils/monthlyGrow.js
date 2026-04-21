@@ -7,7 +7,7 @@ export const monthlyGrow = (years, amount, rate) => {
     for(let i = 1; i<=years; i++)  {
         const obj = {
             year: i,
-            interets: newAmount,
+            interets: newAmount * rate,
             total: (newAmount * rate) + newAmount
         }
 
@@ -18,5 +18,4 @@ export const monthlyGrow = (years, amount, rate) => {
     return arr
 }
 
-
-// console.log(monthlyGrow(5, 1000, 0.01))
+// console.log(monthlyGrow(5, 10000, 0.01))
