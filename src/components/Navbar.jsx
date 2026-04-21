@@ -4,17 +4,15 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <h1>CreditConcierge</h1>
-      <ul className="nav_list">
-        <li>
-            <a href='#'>compare</a>
-        </li>
-        <li>
-            <a href="#">offers</a>
-        </li>
-      </ul>
+      
+      <div className="nav-links">
+        <button>Compare</button>
+        <button>Offers</button>
+      </div>
 
       <div className="icons">
-        
+        <i className="fas fa-search"></i>
+        <i className="fas fa-user"></i>
       </div>
     </div>
   )

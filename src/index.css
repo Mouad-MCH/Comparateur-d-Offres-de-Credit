@@ -9,10 +9,81 @@
 }
 
 
+@layer base {
+    body {
+        @apply bg-neutral text-gray-800 font-sans;
+    }
+
+    h1 {
+        @apply text-3xl font-bold text-primary;
+    }
+
+    .nav-links {
+        @apply flex-center gap-10;
+
+
+        & button {
+            @apply text-black hover:text-primary cursor-pointer transition-colors duration-300 ;
+        }
+    }
+
+    .icons {
+        @apply flex gap-5 text-gray-600;
+
+        & i {
+            @apply text-lg cursor-pointer hover:text-primary transition-colors duration-300;
+        }
+    }
+}
 
 @layer components {
     .navbar {
-        @apply flex justify-between items-center px-10 bg-secondary;
+        @apply flex justify-between items-center px-10 py-5 bg-secondary;
+    }
+
+    .offer-card {
+        @apply relative bg-white p-5 rounded-lg shadow-md transition-transform duration-300 hover:shadow-lg w-fit min-w-70;
+
+        & .bank-name {
+            @apply flex items-center justify-between mb-3;
+
+            & i {
+                @apply text-2xl text-gray-500;
+            }
+        }
+
+        & h2 {
+            @apply text-xl font-semibold mb-2;
+        }
+
+        & p {
+            @apply text-gray-600 mb-4;
+        }
+        
+
+        & .offer-details {
+            @apply items-center;
+
+            & .price {
+                @apply text-green-500 font-bold;
+            }
+
+            & span {
+                @apply block text-lg  font-bold;
+            }
+        }
+
+        & .details-btn {
+            @apply w-full rounded-lg bg-secondary text-white py-2 mt-4 hover:bg-primary transition-colors duration-300 cursor-pointer;
+        }
+    }
+
+    .isRecomonded {
+        @apply absolute p-2 px-10 rounded-lg bg-tertialy text-white text-xs font-bold top-[-15px] left-2 shadow-sm shadow-gray-400;
+    }
+
+    .offer-list {
+        @apply grid gap-6 md:grid-cols-2 lg:grid-cols-4;
     }
 }
 
