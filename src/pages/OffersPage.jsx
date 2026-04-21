@@ -1,3 +1,4 @@
+import OfferDetails from "../components/OfferDetails.jsx";
 import OfferList from "../components/OfferList.jsx";
 
 const OffersPage = ({ offers }) => {
@@ -11,6 +12,8 @@ const OffersPage = ({ offers }) => {
       <OfferList 
         offers={offers}
       />
+
+      <div id="details-container" className="mt-6"></div>
 
     </div>
   )

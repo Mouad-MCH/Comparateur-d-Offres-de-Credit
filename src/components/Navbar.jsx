@@ -7,11 +7,11 @@ const Navbar = () => {
       
       <div className="nav-links">
         <button>Compare</button>
-        <button>Offers</button>
+        <button className='active'>Offers</button>
       </div>
 
       <div className="icons">
-        <i className="fas fa-search"></i>
+        <i className="fa-solid fa-bell"></i>
         <i className="fas fa-user"></i>
       </div>
     </div>

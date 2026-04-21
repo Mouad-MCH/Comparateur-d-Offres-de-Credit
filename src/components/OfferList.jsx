@@ -1,4 +1,4 @@
-import React from "react";
+import OfferCard from "./OfferCard.jsx";
 
 const OfferList = ({ offers }) => {
   const MIN_RATE = Math.min(...offers.map((offer) => offer.rate));

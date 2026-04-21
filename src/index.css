@@ -15,7 +15,7 @@
     }
 
     h1 {
-        @apply text-3xl font-bold text-primary;
+        @apply text-3xl font-bold;
     }
 
     .nav-links {
@@ -38,7 +38,15 @@
 
 @layer components {
     .navbar {
-        @apply flex justify-between items-center px-10 py-5 bg-secondary;
+        @apply flex justify-between items-center px-10 py-5;
+
+       h1 {
+        @apply text-3xl font-bold text-primary cursor-pointer;
+       }
+
+        & button.active {
+          @apply text-primary;
+        }
     }
 
     .offer-card {
@@ -83,7 +91,23 @@
     }
 
     .offer-list {
-        @apply grid gap-6 md:grid-cols-2 lg:grid-cols-4;
+        @apply grid gap-3 sm:grid-cols-2 lg:grid-cols-5;
+    }
+
+    .offer_details {
+        @apply absolute bg-white w-fit top-[50%] left-[50%] translate-[-50%] shadow-sm rounded-lg p-5;
+
+        & .details_info div {
+            @apply grid grid-cols-2 max-sm:grid-cols-1 max-sm:text-center gap-5 my-10 text-center;
+
+            & p {
+                @apply relative font-medium overflow-hidden bg-neutral w-fit p-5 rounded-lg before:absolute before:top-0 before:left-0 before:content-['']  before:w-2 before:h-full before:bg-primary;
+
+                & span {
+                    @apply font-bold;
+                }
+            }
+        }
     }
 }
 
